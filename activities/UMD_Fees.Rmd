@@ -33,7 +33,7 @@ umd_fees_pct <- umd_fees |> mutate(pct_change = (`Fall 2026`- `Fall 2021`)/`Fall
 
 Write a few sentences about what you found in those percentages. What's the story here? What questions do you have?
 
-Nearly all of the percentages show fees have increased, except the UMD Athletics fee. The percentage increases range anywhere from 16.6% to 150%, though one percentage could not be calculated--as the fee was 0 in 2021 and 52 in 2026. Many of the fees that experienced a significant increase, like the Shuttle Bus fee, Student Counseling Center fee, and Student Sustainability fee, are not widely used services. Therefore, I think further investigation into whether these additional fees actually serve the general UMD student population could be news-worthy. Research into why these services required a fee increase would also be useful.
+### Nearly all of the percentages show fees have increased, except the UMD Athletics fee. The percentage increases range anywhere from 16.6% to 150%, though one percentage could not be calculated--as the fee was 0 in 2021 and 52 in 2026. Many of the fees that experienced a significant increase, like the Shuttle Bus fee, Student Counseling Center fee, and Student Sustainability fee, are not widely-used services. Therefore, I think further investigation into whether these additional fees actually serve the general UMD student population could be news-worthy. Research into why these services required a fee increase, like the UMD Counseling Center, would also be useful.
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
