@@ -59,7 +59,7 @@ Look at the `summer_crime_averages` dataframe by clicking on it in the Environme
 Write up a lede and nutgraf of a story focused on the crime data in Prince George's County. It could be from any of the dataframes you've created in this assignment. The lede should be a single sentence that summarizes the most important information in the data. The nutgraf should be a paragraph that provides more context and explains why the data is important.
 
 ###Lede: Assault shootings in Prince George's county saw a 34% increase in July compared to monthly averages.
-###Nutgraf: Throughout the year, Prince George's county experienced 188 assault shootings, averaging nearly 16 incidents per month. The number of assault shootings rose to 21 in the month of July, a 34% increase compared to the monthly average. The only other months that saw this significant of an increase was August and October. 
+###Nutgraf: Throughout the year, Prince George's county experienced 188 assault shootings, averaging nearly 16 incidents per month. The number of assault shootings rose to 21 in the month of July, a 34% increase compared to the monthly average. The only other months that saw this significant of an increase was August and October.
 
 
 ### Task 9: Save Your Work and Put it on GitHub
