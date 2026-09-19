@@ -9,6 +9,9 @@ In this assignment, we will be working with a dataset of total crimes reported b
 You will need to load the tidyverse library and the janitor library
 
 ```{r}
+library(tidyverse)
+install.packages("janitor")
+library(janitor)
 ```
 
 Then you'll load the data from the web. The URL for the data is: https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_cities_crime_2019_2020.csv. You will create a dataframe called `md_cities` that contains the data from this URL.
@@ -16,39 +19,42 @@ Then you'll load the data from the web. The URL for the data is: https://raw.git
 ### Task 2: Load the Data
 
 ```{r}
+md_cities <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_cities_crime_2019_2020.csv")
 ```
 ### Task 3: Calculating Rates
 
 Calculate violent and property crime rates for each city for both years using `mutate()`. You'll create four new columns: `violent_rate_2019`, `property_rate_2019`, `violent_rate_2020`, and `property_rate_2020`. You'll need to figure out the proper unit rate, given that there are varying populations. There's no perfect choice; choose the one that works best for you. Save the results to a new dataframe called `md_cities_rates`.
 
 ```{r}
+md_cities_rates <- md_cities |> mutate(violent_rate_2019 = violent2019/pop2019 * 1000, property_rate_2019 = property2019/pop2019 * 1000, violent_rate_2020 = violent2020/pop2020 * 1000, property_rate_2020 = property2020/pop2020 * 1000)
 ```
 
 ### Task 4: Describe the Rates
 
 Examine the new dataframe, `md_cities_rates`, by clicking on it in the Environment tab in RStudio and sorting by the rate columns. Write a couple of sentences about the results, comparing and contrasting the cities with the highest rates (both violent and property) in 2019 and 2020. Do you see any patterns? What does this tell you about crime in Maryland cities? What's the story here?
 
-ANSWER HERE
-
+###Before even looking at the new dataframe, I was curious to see the crime rates for Baltimore and Ocean City--two Maryland cities that often get stereotyped as "crime-ridden" or "dangerous." As I expected, Ocean City had an exceedingly high property theft rate, but I noticed it's population was only listed at around 6500. My guess is that the influx of tourists that visit Ocean City in the summer drive up crime rates, skewing the data. Baltimore's violent crime rate was higher than most of Maryland, but surprisingly, its property crime rates were surpassed by several less-populated cities--including La Plata, Colmar Manor, and Hyattsville. I would base my story around why these smaller cities hold higher rates of property-related crime, and why the news rarely mentions these statistics--especially since larger cities like Baltimore are portrayed as more dangerous than small towns.
 
 ### Task 5: Calculate Percentage Change
 
 Let's add two percentage change columns to your dataframe: one for violent crime rates and one for property crime rates. You'll calculate the percentage change between 2019 and 2020 for each city. Save the results to a new dataframe called `md_cities_change`.
 
 ```{r}
+md_cities_change <- md_cities_rates |> mutate(violent_rate_change = (violent_rate_2020 - violent_rate_2019) / violent_rate_2019 * 100, property_rate_change = (property_rate_2020 - property_rate_2019) / property_rate_2019 * 100)
 ```
 
 ### Task 7: Describe Percentage Changes
 
 Look at the `md_cities_change` dataframe by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the percentage change results. What's more interesting here, the patterns or the outliers? What's the story in the data?
 
-ANSWER HERE
+###After analyzing the percentage changes between 2019 and 2020, a couple patterns and outliers stood out to me. I expected both violent and property crime to decline in 2020, hindered by the COVID-19 pandemic. The majority of property crime rates decreased, but violent crime rates were more varied--actually increasing in many of the cities listed. I'd consider this unexpected pattern news-worthy, as I initially predicted stay-at-home orders would prevent violent encounters. High rates of unemployment/food insecurity, school closures, social justice movements, stress/mental health, and forced proximity could all be to blame--but conclusive evidence would require further journalistic research.
 
 ### Task 8: Tell the Best Story
 
 Write up a lede and nutgraf of a story with the _best_ story idea you've found in this assignment. The lede should be a single sentence that summarizes the most important information in the data. The nutgraf should be a paragraph that provides more context and explains why the data is important.
 
-ANSWER HERE
+###Lede: Ocean City had Maryland’s highest property crime rate in 2019, with nearly 104 property crimes per one thousand residents. 
+###Nutgraf: The city experienced 720 property crimes throughout 2019 according to local law enforcement data. Property crimes, which includes burglary, larceny, motor vehicle theft, and arson, are non-violent and target one's property rather than their person. Ocean City's property crime rate is abnormally high among Maryland cities, especially when compared to their small population of 6944.
 
 ### Task 9: Save Your Work and Put it on GitHub
 
