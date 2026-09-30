@@ -294,3 +294,5 @@ cat(sprintf("Actual data - proportion of months this high or higher: %.4f (%.2f%
 ```
 
 The `pnorm()` estimate and the actual proportion won't match perfectly — `pnorm()` assumes a normal distribution, and real data is never perfectly normal. But they should be in the same ballpark, and the comparison helps us see how well the normal model fits.
+
+I'll save my car stealing for April since no one will have their guard up.
