@@ -9,6 +9,7 @@ Your goal is to see firsthand how sample size affects the accuracy of estimates,
 ### Task 1: Load the tidyverse
 
 ```{r}
+library(tidyverse)
 ```
 
 ### Task 2: Load the CES data
@@ -18,6 +19,7 @@ Load the CES 2024 religion dataset from this URL and save it to a dataframe call
 `https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/ces_2024_religion.csv`
 
 ```{r}
+ces <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/ces_2024_religion.csv")
 ```
 
 ### Task 3: Calculate the population proportion
@@ -35,36 +37,42 @@ proportion <- mean(ces$unaffiliated)
 
 That population proportion is the "true" population value that any poll is trying to estimate. Write it down — you'll be comparing everything else to it.
 
+Population proportion: .359
+
 ### Task 4: Take a single small sample
 
 Use `set.seed(42)` and then sample 50 rows from `ces`. Save it as `sample_50`. Calculate the proportion of unaffiliated respondents in your sample.
 
 ```{r}
-
+set.seed(42)
+sample_50 <- ces |> sample_n(50)
+mean(sample_50$unaffiliated)
 ```
 
 How close is your sample estimate to the original proportion? Is it surprising?
 
-ANSWER HERE
+###My sample estimate is somewhat close to the original proportion, but it's off by a few decimal points. I wouldn't say this is surprising--the sample size only included 50 people, so some variation is to be expected.
 
 ### Task 5: Take a single larger sample
 
 Now sample 500 rows. Set a different seed value, grab the sample and save it as `sample_500`. Calculate the proportion of unaffiliated respondents in this sample.
 
 ```{r}
-
+set.seed(499)
+sample_50 <- ces |> sample_n(500)
+mean(sample_50$unaffiliated)
 ```
 
 How did the estimate change compared to the sample of 50? What does this suggest about sample size?
 
-ANSWER HERE
+###When I used a sample size of 500, my estimate became closer to the original proportion. This suggests that as the sample size increases, variation decreases.
 
 ### Task 6: Simulate many polls
 
 A single sample can get lucky or unlucky. To understand how polling actually works, we need to see the *distribution* of estimates across many samples. The code below draws 1,000 samples of size 50, calculates the proportion of unaffiliated respondents in each, and stores the results.
 
 ```{r}
-set.seed(REPLACE_ME)
+set.seed(900)
 
 simulate_polls <- function(data, sample_size, n_simulations = 1000) {
   proportions <- replicate(n_simulations, {
@@ -104,16 +112,18 @@ ggplot(simulations_all, aes(x = proportion)) +
 
 **What shape do both histograms have?** Describe them in plain language. Does it surprise you that this shape emerges from a variable that is simply TRUE or FALSE for each respondent?
 
-ANSWER HERE
+Both histograms have a roughly bell-shaped, mostly symmetrical curve. It does surprise me that this shape emerges from such a simple question, though it makes sense given I'm plotting proportions from many random samples.
 
 **Compare the two histograms.** What is the most visible difference between the n=50 and n=500 distributions? What does that difference tell you about what happens when a poll uses a larger sample?
 
-ANSWER HERE
+The histogram showing a sample size of 50 has high levels of variation, and it's data is spread out. The 500 sample size histogram is much more consistent with its data, giving it a narrower spread. This difference indicates that larger polls typically produce more precise estimates, with less variation from sample to sample.  
 
 **Both distributions are centered near the red line.** What does it mean that 1,000 different random samples — each one drawn independently — tend to cluster around the same value? What would it mean for journalism if that *weren't* the case?
 
-ANSWER HERE
+From a journalistic perspective, it's a good sign that the samples tend to cluster around the same value. This suggests that the random sampling method gets close to the true population proportion on average. If they weren't clustered around the true population proportion, I'd worry that the samples indicate bias or a less reliable estimate. This would make it harder for journalists to confidently report on the population's opinion.
 
 **A reporter tells you their story is based on a poll of 50 people.** Based on what you've seen in the simulation, what questions would you want to ask before trusting that number? You don't need to use any technical terms — just describe what you observed.
+
+If a reporter was using a poll of 50 people in their story, I'd worry that their data wouldn't properly represent the population. As we've seen throughout the activity, larger, random samples tend to be more accurate. I would question how they conducted the survey, asking the following questions: How did you select the participants of your poll? Who is the poll supposed to represent, and does your sample reflect that? Would the results be vastly different if you asked another group of 50 people?
 
 When finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
