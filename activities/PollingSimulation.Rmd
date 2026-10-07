@@ -59,8 +59,8 @@ Now sample 500 rows. Set a different seed value, grab the sample and save it as 
 
 ```{r}
 set.seed(499)
-sample_50 <- ces |> sample_n(500)
-mean(sample_50$unaffiliated)
+sample_500 <- ces |> sample_n(500)
+mean(sample_500$unaffiliated)
 ```
 
 How did the estimate change compared to the sample of 50? What does this suggest about sample size?
