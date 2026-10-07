@@ -124,6 +124,6 @@ From a journalistic perspective, it's a good sign that the samples tend to clust
 
 **A reporter tells you their story is based on a poll of 50 people.** Based on what you've seen in the simulation, what questions would you want to ask before trusting that number? You don't need to use any technical terms — just describe what you observed.
 
-If a reporter was using a poll of 50 people in their story, I'd worry that their data wouldn't properly represent the population. As we've seen throughout the activity, larger, random samples tend to be more accurate. I would question how they conducted the survey, asking the following questions: How did you select the participants of your poll? Who is the poll supposed to represent, and does your sample reflect that? Would the results be vastly different if you asked another group of 50 people?
+If a reporter was using a poll of 50 people in their story, I'd worry that their data wouldn't properly represent the population. As we've seen throughout the activity, larger, random samples tend to be more accurate. I would question how they conducted the survey, asking the following questions: How did you select the participants of your poll? Who is the poll supposed to represent, and does your sample reflect that? Could the results be very different if you asked another group of 50 people?
 
 When finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
