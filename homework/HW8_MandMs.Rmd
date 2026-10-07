@@ -6,26 +6,48 @@ In this assignment, you'll be picking up where you left off with the M&Ms activi
 
 ### Task 1: Load the tidyverse
 
+```{r}
+library(tidyverse)
+```
 
 ### Task 2: Load the M&Ms dataset from https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/mandms.csv
 
+```{r}
+m_and_m <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/mandms.csv")
+```
 
 ### Task 3: Sample 5 rows of data from the dataset
 
+```{r}
+set.seed(99)
+sample_5 <- m_and_m |> sample_n(5)
+```
 
 ### Task 4: Calculate the mean age and standard deviation of the sample, using either the red or black number of M&Ms
 
+```{r}
+mean(sample_5$red)
+sd(sample_5$red)
+```
 
 ### Task 5: Calculate the mean age and standard deviation of the population, using the same measure as in Task 4
 
+```{r}
+mean(m_and_m$red)
+sd(m_and_m$red)
+```
 
 ### Task 6: Compare the sample and population statistics
 
 Compare the two sets of means and standard deviations. Are they similar?
 
+###The two sets of means and standard deviations are somewhat similar, but the sample has a higher mean and standard deviation. 
+
 ### Task 7: Describe the results
 
 Write a few sentences about what you found in the data. What does this tell you about the M&Ms dataset and about the act of random sampling?
+
+As I explained before, the mean and standard deviation of the sample are higher than those of the population. The sample's standard deviation was 20.84, compared to the population's 16.46, meaning the counts in the sample were more spread out. This indicates that a random sample of five rows can differ from the full M&M dataset. When dealing with random sampling, it's important to use a larger sample size-- as it typically gives us a more accurate picture of the population by reducing the influence of unusually high or low counts.
 
 
 When finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
