@@ -136,17 +136,14 @@ md_car_thefts <- md_car_thefts |>
 ```{r}
 md_car_thefts |>
   arrange(desc(theft_rate)) |>
-  select(county, theft_rate) |>
   head(5)
 
 md_car_thefts |>
   arrange(desc(pct_change)) |>
-  select(county, pct_change) |>
   head(5)
 
 md_car_thefts |>
   arrange(pct_change) |>
-  select(county, pct_change) |>
   head(5)
 ```
 
