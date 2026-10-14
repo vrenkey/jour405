@@ -108,7 +108,7 @@ I found 10 days with unusual rail z-scores, and 38 days with unusual weekday z-s
 
 ### Task 9: Write 2–3 sentences: How do the two lists of unusual days differ, and what story leads does each suggest? (8 points)
 
-Just like the car crash activity we did in class, some days experience more rail traffic because of work commutes or weekend plans, so comparing all days together may flag normal differences in ridership. There were only 10 days with unusual overall rail z-scores, and I would make my story around whether low ridership was related to power outages, maintenance work, or station closures. However, when I compared z-scores depending on day of the week, I found 38 unusual dates, many of which weren't on the previous list--giving me more dates to investigate for disruptions or major events.
+Just like the car crash activity we did in class, some days experience more rail traffic because of work commutes or weekend plans, so comparing all days together may identify normal differences in ridership. There were only 10 days with unusual overall rail z-scores, and I would make my story around whether low ridership was related to power outages, maintenance work, or station closures. However, when I compared z-scores depending on day of the week, I found 38 unusual dates, many of which weren't on the previous list--giving me more dates to investigate for disruptions or major events.
 
 ## Part 3: Maryland Car Theft Rates (25 points)
 
