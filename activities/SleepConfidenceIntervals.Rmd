@@ -41,7 +41,7 @@ sleep_stats
 
 **Answer this question:** Based on these numbers alone, what would you tell the health reporter? Why might it be risky to report the average as the definitive answer for all students?
 
-ANSWER HERE
+Based on the data, the students surveyed slept an average of 7.73 hours, with a standard deviation of 1.35. However, it would be risky for the health reporter to use this because the sample size of 37 might not represent the whole student body. As we've covered in class, large, random samples usually yield more accurate results. Additionally, the data only includes one night--and that one night of sleep many not reflect students' general sleep habits.  
 
 ### Task 3: Calculate the standard error
 
@@ -58,7 +58,7 @@ sleep_stats
 
 **Answer this question:** The standard error is much smaller than the standard deviation. Why? What does each one measure?
 
-ANSWER HERE
+The standard deviation is 1.35 and the standard error is .22. In the context of this data, the standard deviation measures the spread of the students' sleep hours, whereas the standard error calculates how much the average would vary if we took different random samples of 37 students. The standard error is smaller, as averages from multiple samples tend to vary less than individual students' sleep hours.
 
 ### Task 4: Calculate a 95% confidence interval
 
@@ -79,7 +79,7 @@ sleep_stats |>
 
 **Answer this question:** Write one sentence explaining what this confidence interval means in plain English that a reader would understand.
 
-ANSWER HERE
+According to the data, I am 95% confident that the student body's average amount of sleep is between 7.28 and 8.18 hours.
 
 ### Task 5: Visualize the distribution with the confidence interval
 
@@ -112,7 +112,7 @@ ggplot(sleep_data, aes(x = hours)) +
 
 **Answer this question:** Look at the chart. Notice that the confidence interval is much narrower than the spread of individual data points. Why? What's the difference between the variation in individual sleep hours and the uncertainty about the average?
 
-ANSWER HERE
+The confidence interval measures uncertainty about the student body’s average rather than the spread of individual data points. It is much narrower because sample averages tend to vary less than individual students’ sleep hours.
 
 ### Task 6: The CDC question — is 7 hours within the interval?
 
@@ -134,7 +134,7 @@ sleep_stats |>
   b) "Students May Not Be Getting Enough Sleep, Survey Suggests"
   c) "Survey: Students Getting Recommended Amount of Sleep"
 
-ANSWER HERE
+Based on the results, Headline A is justified. The confidence interval is 7.28 to 8.18 hours, meaning we can confidently say students on average sleep at least 7 hours a night. The data proves Headline B's assumption is incorrect, and Headline C implies that, in general, students are getting the recommended amount of sleep. It's important to specify that this survey only calculates the average and may not speak for all students.
 
 ### Task 7: What about a bigger sample?
 
@@ -167,7 +167,7 @@ comparison
 
 **Answer this question:** How did the margin of error change? What does this tell you about the relationship between sample size and certainty?
 
-ANSWER HERE
+The margin of error decreased, meaning we're more certain of the average and that it's between 7.46 and 8. This shows that larger sample sizes provide more precise estimates, as it narrows the confidence interval and reduces uncertainty about the average. 
 
 ### Task 8: Journalistic interpretation
 
@@ -175,4 +175,5 @@ You now have all the statistics you need. Based on what you've calculated:
 
 Write a headline and a one-paragraph lede for a campus news story about student sleep habits. Your text should accurately reflect the confidence interval — don't overstate or understate the findings.
 
-ANSWER HERE
+Headline: Students Average Nearly Eight Hours of Sleep, Survey Finds
+Lede: University students average 7.73 hours of sleep a night, according to a campus survey of 37 students. The CDC recommends at least 7 hours of sleep a night for adults aged 18-25, putting the estimated average above the advised minimum. The estimate average ranged from 7.28 to 8.18 at a 95% confidence level, though survey only covered one night and may not represent the entire student body.
