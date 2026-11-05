@@ -125,7 +125,7 @@ t_test_result
 
 **Answer this question:** Look at the p-value. Is it less than our alpha of 0.05? What does this mean for our null hypothesis — can we reject it? What can we now say about the officials' claim?
 
-We can reject the null hypothesis based on the p-value, as it is less than our alpha of 0.05. The null hypothesis simply states that average home prices have not increased above $285,000, and this data provides evidence against that. This does tell the officials there's been an increase in home prices--but it does not tell them whether that difference is meaningful or whether the transit line caused it.
+We can reject the null hypothesis based on the p-value, as it is less than our alpha of 0.05. The null hypothesis simply states that average home prices have not increased above $285,000, and this data disproves that. This does tell the officials there's been an increase in home prices--but it does not tell them whether that difference is meaningful.
 
 ### Task 5: Interpret the results with a confidence interval (2 points)
 
@@ -155,7 +155,7 @@ story_stats
 
 **Answer this question:** The 95% confidence interval tells us the range where the true average home price likely falls. Does that range include the old average of $285,000? What does that tell you?
 
-ANSWER HERE
+The 95% confidence interval ranges from $297,624 to $311,376, meaning it doesn't include the old average of $285,000. This indicates the average home prices have increased--as the entire range is higher than the previous average. However, just because there's been a statistically significant change in home prices doesn't mean it's abnormally large or that the transit line caused it.
 
 ### Task 6: Calculate the effect size (3 points)
 
@@ -166,7 +166,7 @@ We've established that the increase is statistically significant — it's real, 
 Replace the REPLACE_ME values.
 
 ```{r}
-effect_size <- (mean(new_prices) - REPLACE_ME) / REPLACE_ME
+effect_size <- (mean(new_prices) - prior_mean) / prior_sd
 
 effect_size_label <- case_when(
   abs(effect_size) < 0.2 ~ "Negligible",
@@ -185,7 +185,7 @@ tibble(
 
 **Answer this question:** The effect size is "medium." In dollar terms, the average increase is about $19,500. But remember that the standard deviation of home prices in this neighborhood was $32,000 *before* the transit line — meaning prices already varied by tens of thousands of dollars from sale to sale. Given that context, does a $19,500 increase seem large or modest? How does the effect size help you think about this differently than just looking at the dollar amount?
 
-ANSWER HERE
+Given that the standard deviation of home prices was $32,000 before the transit line opened, the $19,500 increase does seem more modest. If I were to look at just the dollar amount, I'd think home prices experienced a big increase-- but Cohen's d shows that the effect was Medium, since it compared it to the variation that already existed in home prices. Upon analyzing the data, I've concluded that while this increase is statistically significant, it's not as significant as the dollar amount makes it seem.
 
 ### Task 7: What's the story? (6 points)
 
@@ -193,11 +193,12 @@ You now have all the statistical evidence. But writing the story requires more t
 
 **Part A:** The local officials are going to claim the transit line increased home values. Based on your analysis, is that claim supported? Write 2-3 sentences for the top of your story that accurately reflect both the statistical significance AND the effect size. Don't just echo the officials' talking points — interrogate them.
 
-ANSWER HERE
+2-3 sentences for my story:
+
+Local officials claim that a new light rail line increase property values, but an analysis of 14 home sales does not establish the line caused the increase. Home sale prices in the neighborhood averaged $304,500 after the transit line opened, increasing by $19,500 from the previous average. The increase was statistically significant, though its effect size was medium compared to how much prices previously varied.
 
 **Part B:** A $19,500 increase is real and statistically significant, but what *else* could explain rising home prices in this neighborhood? List at least two alternative explanations that a good reporter would want to investigate before attributing the increase entirely to the transit line.
 
-ANSWER HERE
-
+There are several other explanations on why this neighborhood's home prices could be increasing, which would require further investigation for my story. First, I'd investigate the region the neighborhood is located in. If it's an area that's become desirable recently or experienced significant infrastructure development, it'd make sense the property value are rising. In that case, I'd expect nearby neighborhoods without a new rail line to experience similar increases. Furthermore, it's important to consider the housing market during this time period, and whether rising prices could be attributed to broader economic trends. Prices are heavily dependent on increased property demand and how many homes are for sale.
 
 When you are finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
