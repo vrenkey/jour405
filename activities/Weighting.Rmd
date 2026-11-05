@@ -93,10 +93,13 @@ ggplot(nonvoters_data, aes(x = weight)) +
 **Questions:**
 
 1. What is the range of weights in this dataset?
+The range of weights in this dataset are .23 to 3.04
 
 2. What does it mean when a respondent has a weight of 0.23? What about 3.04?
+If a respondent has a weight of .23, they count as less than one person because their group is over represented. If a respondent has a weight of 3.04, they are underrepresented.
 
 3. Why might some respondents be weighted more heavily than others?
+Some groups have fewer respondents because of their share of the population--so their responses are weighted more heavily to compensate.
 
 # Exercise 1: Voter Categories and Weighting
 
@@ -232,7 +235,11 @@ kable(comparison, digits = 1, caption = "Difference Between Weighted and Unweigh
 **Answer These Questions:**
 
 1. Which voter category shows the biggest difference between weighted and unweighted results?
+Based on the data, the rarely/never voter category shows the biggest difference, as the percentage who plan to vote decreased by 3.6 percent after weighing.
 
 2. How might these differences affect reporting on likely voter turnout?
+Reporting on likely voter turnout would be affected by the rarely/never vote group being overrepresented in the data. The unweighted results suggest more people in that category planned to vote than the weighted results do. This means reporters could overestimate likely turnout if they don't properly account for the weights.
 
 3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample?
+These differences exist because some groups are over or underrepresented in the sample. Among rarely/never voters, those who planned to vote received less weight on average, suggesting they were over represented within that category. This could happen for a number of reasons--like that some people are more likely to respond to surveys than others. Properly weighting your data shows who you should adjust your results for, ensuring your data properly represents the population. 
+
