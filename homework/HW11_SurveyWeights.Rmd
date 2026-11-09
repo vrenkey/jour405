@@ -153,4 +153,8 @@ Earlier in class this week, we looked at the 2024 UMD Belonging and Community Su
 
 **Question 5:** Based on what you've learned in this assignment, write 2-3 paragraphs as if you were a reporter evaluating the UMD survey before writing a story based on it. Address: (1) what the lack of weighting means for how you'd use the results, (2) which groups in the UMD survey appeared most underrepresented based on Figures 1 and 2, and (3) what question you would ask the survey's authors before publishing.
 
-ANSWER HERE
+Before writing a story about the UMD Belonging and Community survey, I'd consider how the lack of weighting affects its results. Certain groups or demographics responded much more or much less than others--and these differences weren't adjusted to better match UMD's population.
+
+Based on Figure 1, men were underrepresented, making up 50% of UMD's population but only 38% of respondents. Hispanic/Latinx respondents showed the biggest percentage-point gap in Figure 2, making up 9% of the population but only 5% of responses. Black/African American respondents were also underrepresented in Figure 2 with only 11% of responses, despite making up 13% of the population.
+
+The survey still has merit, so I'd use it's results in my article. However, I'd clarify to readers that the data reflects the respondents--and that data may not represent UMD's entire student population. Before publishing my story, I'd ask the survey authors why they didn't utilize weighting or collect responses that better represented UMD's population. I'd also research whether weighting would significantly change the results or my story. In this assignment, weighting changed the exact numbers, but my headline remained the same. The same might be true for the UMD survey, but it would require further investigation.
