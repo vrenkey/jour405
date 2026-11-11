@@ -43,6 +43,7 @@ pg_murders_heat |>
 
 pg_murders_heat |> 
   ggplot() +
+  geom_point(aes(x=temperature, y=murders, label=month)) +
   geom_text(aes(x=temperature, y=murders, label=month), size = 5) +
   geom_smooth(aes(x=temperature, y=murders, method="lm"))
 
@@ -51,6 +52,6 @@ pg_murders_heat |>
 
 ### Task 6: Describe the results of both the correlation calculation and the scatterplot.
 
-The results of both the correlation calculation and the scatterplot show both increased temperatures and overall numbers of murders during May, June, July, August and September (with upper bounds of about 80 degrees and 45 murders) — and decreased temperatures and murders in November, Februrary, January and December (with lower bounds of around 35 degrees and 20 murders). The scatterplot illustrates somewhat of a steep dropoff between these two categories of months, relating to the conclusion that more murders occur during the summer months (when temperatures are high and it's more appealing for indivudals to be outside), while a decreased number of murders occur in relation to colder temperature-months (specifically in the winter season, when it's less appealing for individuals to go outside and less accessible for murders to take place). In short, there's definitely a moderate to strong correlation between overall temperatures and number of murders.
+Unlike the soccer activity, the scatterplot and calculation indicate a medium correlation between murder rates and temperature. The calculation generated a correlation of .58--and though this is still around .40 away from 1, it indicates at least some kind of relationship between the two categories. The scatterplot reinforces this claim; in general, murders seem to rise as the temperature increases. While the line of best fit isn't a straight, diagonal incline, it's overall upwards direction tells us there's a moderate correlation.
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
